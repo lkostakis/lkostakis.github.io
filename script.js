@@ -5,6 +5,20 @@ const originalHomeText = "Welcome to my personal web page! " +
 let indexHome = 0;
 let skipAnimation = 0
 
+function detectSystemTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // Dark mode is enabled
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+    } else {
+        // Light mode is enabled
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode');
+    }
+}
+  
+detectSystemTheme();
+
 document.addEventListener("click", function() {
     skipAnimation = 1;
     clearInterval(delayThreeSeconds);
@@ -39,8 +53,6 @@ function displaySections() {
         clearInterval(delaySections)
     }, 9500)
 })();
-
-
 
 const menuLinks = document.querySelectorAll('.hidden a');
 const contentDiv = document.querySelector('#content');

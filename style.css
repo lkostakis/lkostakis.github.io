@@ -3,8 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-    background: rgb(43, 43, 43); /*rgb(43, 43, 43)*/
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,13 +12,11 @@ body {
     margin-top: 2%;
 }
 #home {
-    color: rgb(239, 239, 239);
     font-size: 1em;
     margin-left: 5%;
     margin-right: 5%;
 }
 #about, #education, #skills {
-    color: rgb(0, 0, 51);
     opacity: 100%;
     font-size: 1em;
     margin-left: 5%;
@@ -32,7 +29,6 @@ body {
 }
 
 #content {
-    color: rgb(239, 239, 239);
     opacity: 100%;
     line-height: 1.5em;
     line-height: 2rem;
@@ -42,8 +38,12 @@ body {
 }
 
 @keyframes cursor-blink {
-    0% {
+    0%, 100% {
         opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
     }
 }
 
@@ -61,16 +61,13 @@ body {
 }
 
 #home h2::after {
-    content: "a";
-    width: 10px;
-    height: 10px;
-    background: rgb(239, 239, 239);
-    display: inline;
-    animation: cursor-blink 1.5s steps(2) infinite;
+    content: "▋";
+    color: black;
+    animation: cursor-blink 1.5s step-end infinite;
 }
 
 a {
-    color: rgb(253, 184, 19);
+    color: rgb(0, 122, 255);
     text-decoration: none;
 }
 
@@ -122,4 +119,14 @@ img {
     #home h2 {
         line-height: 1.5rem;
     }
+}
+
+.light-mode {
+    background-color: #F0F0F0;
+    color: #333333;
+}
+
+.dark-mode {
+    background-color: #333333;
+    color: #F0F0F0;
 }
