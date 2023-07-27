@@ -1,0 +1,125 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+    background: rgb(43, 43, 43); /*rgb(43, 43, 43)*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+#home {
+    color: rgb(239, 239, 239);
+    font-size: 1em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#about, #education, #skills {
+    color: rgb(0, 0, 51);
+    opacity: 100%;
+    font-size: 1em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#home h2 {
+    font-size: 1.5em;
+    line-height: 2rem;
+}
+
+#content {
+    color: rgb(239, 239, 239);
+    opacity: 100%;
+    line-height: 1.5em;
+    line-height: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 50%;
+}
+
+@keyframes cursor-blink {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes sections-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#about, #education, #skills, #content {
+    animation: sections-fade 2s alternate;
+}
+
+#home h2::after {
+    content: "a";
+    width: 10px;
+    height: 10px;
+    background: rgb(239, 239, 239);
+    display: inline;
+    animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+a {
+    color: rgb(253, 184, 19);
+    text-decoration: none;
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+img {
+    width:1.5em;
+    height:1.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+    }
+    
+    #about, #education, #skills {
+        opacity: 100%;
+        font-size: 0.8em;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #content {
+        font-size: 1em;
+        line-height: 1.2rem;
+        width: 90%;
+    }
+
+    #home h2 {
+        line-height: 1.5rem;
+    }
+}
