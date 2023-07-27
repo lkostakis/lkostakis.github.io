@@ -16,6 +16,7 @@ body {
     margin-left: 5%;
     margin-right: 5%;
 }
+
 #about, #education, #skills {
     opacity: 100%;
     font-size: 1em;
@@ -26,6 +27,17 @@ body {
 #home h2 {
     font-size: 1.5em;
     line-height: 2rem;
+}
+
+#skip-intro {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 #content {
@@ -62,7 +74,6 @@ body {
 
 #home h2::after {
     content: "▋";
-    color: black;
     animation: cursor-blink 1.5s step-end infinite;
 }
 

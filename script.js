@@ -2,6 +2,10 @@ const homeSection = document.querySelector("#home h2");
 const originalHomeText = "Welcome to my personal web page! " +
                         "Here you can learn more about me, my interests, and my work. " +
                         "Feel free to explore and get in touch if you have any questions or just want to say hello!<br> Thank you for visiting!";
+
+const skipIntroSection = document.querySelector('#skip-intro');
+skipIntroSection.innerHTML = "&lt;Tap anywhere to skip intro&gt;"
+
 let indexHome = 0;
 let skipAnimation = 0
 
@@ -23,6 +27,7 @@ document.addEventListener("click", function() {
     skipAnimation = 1;
     clearInterval(delayThreeSeconds);
     homeSection.innerHTML = originalHomeText
+    skipIntroSection.style.display = 'none';
     displaySections();
 });
 
@@ -47,6 +52,7 @@ function displaySections() {
 (() => {
     const delaySections = setInterval(() => {
         if (skipAnimation !=1) {
+            skipIntroSection.style.display = 'none';
             displaySections();
             clearInterval(delaySections)
         }
@@ -73,11 +79,11 @@ const aboutMe = '<p>I am a highly motivated software engineer with a passion for
 ' Additionally, I like to attend tech conferences and events to network with other professionals in the field and learn about new developments in the industry.</p>' +
 '<p>Overall, my passion for software engineering, iOS development, operating systems, and artificial intelligence has driven me to pursue a career in this exciting field.'+
 ' With my skills and experience, I am confident that I can make valuable contributions to any team or organization that I work with.</p>' +
-' <p>You can find me at: <a href="https://www.github.com/terrys48" target="_blank"><img src="Assets/github.png" alt="Github"></a>' +
+' <p>You can find me at: <a href="https://www.github.com/lkostakis" target="_blank"><img src="Assets/github.png" alt="Github"></a>' +
 ' or <a href="https://www.linkedin.com/in/eleftherios-kostakis/" target="_blank"><img src="Assets/linkedin.png" alt="LinkedIn"></a>' +
 '</p> <p>Email Account: lp.kostakis@gmail.com</p>';
 
- contentDiv.innerHTML = aboutMe;
+contentDiv.innerHTML = aboutMe;
 
 menuLinks.forEach(link => {
     link.addEventListener('click', event => {
@@ -99,7 +105,7 @@ menuLinks.forEach(link => {
               contentDiv.innerHTML = '<p>Here are my skills and abilities.</p>';
               break;
         default:
-              contentDiv.innerHTML = 'diuadiawhduiauwduhiwaahuidhuaw';
+              contentDiv.innerHTML = 'Default text';
     }
   });
 });
