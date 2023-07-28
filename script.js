@@ -96,10 +96,7 @@ menuLinks.forEach(link => {
             break;
           case '#education':
               contentDiv.innerHTML = '<p>I hold a Master of Engineering degree (EQF level 7) from the Department ' +
-              'of Computer Science & Engineering, School of Engineering, University of Ioannina.</p>'+'<p>I hold a Master of Engineering degree (EQF level 7) from the Department ' +
-              'of Computer Science & Engineering, School of Engineering, University of Ioannina.</p>'+'<p>I hold a Master of Engineering degree (EQF level 7) from the Department ' +
-              'of Computer Science & Engineering, School of Engineering, University of Ioannina.</p>'+'<p>I hold a Master of Engineering degree (EQF level 7) from the Department ' +
-              'of Computer Science & Engineering, School of Engineering, University of Ioannina.</p>';
+              '<p>You can find my thesis online at: <a href="/Documents/kostakis_thesis.pdf">kostakis_thesis.pdf</a>.</p>';
               break;
           case '#skills':
               contentDiv.innerHTML = '<p>Here are my skills and abilities.</p>';
