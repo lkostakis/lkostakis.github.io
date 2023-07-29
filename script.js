@@ -62,23 +62,18 @@ function displaySections() {
 
 const menuLinks = document.querySelectorAll('.hidden a');
 const contentDiv = document.querySelector('#content');
-const aboutMe = '<p>I am a highly motivated software engineer with a passion for iOS Engineering, operating systems, and artificial intelligence.' +
-' I have a Master of Engineering degree (EQF level 7) from the Department of Computer Science & Engineering, School of Engineering, University of Ioannina.</p>' +
-'<p> My academic background and work experience have provided me with a strong foundation in programming languages, software development, and engineering principles.' +
-' During my studies, I have gained extensive knowledge in computer networks, algorithms, databases, and software architecture.' +
+const aboutMe = '<p>I am a highly motivated software engineer with a passion for iOS Engineering, operating systems, and computer vision.' +
+' I have a Master of Engineering degree (EQF level 7) from the <a href="https://engineering.uoi.gr/en/department-of-computer-science-and-engineering/" target="_blank">' +
+' Department of Computer Science & Engineering, School of Engineering, University of Ioannina.</a></p>' +
+'<p> During my studies, I have gained extensive knowledge in computer networks, algorithms, databases, and software architecture.' +
 ' I have also developed a keen interest in iOS app development, which led me to specialize in this field.</p>' +
-' <p>After completing my degree, I started working as an iOS engineer in a company named Advantage.' +
-' My role involves developing, testing, and implementing high-quality iOS applications for our clients.' +
-' I am responsible for designing and implementing features, fixing bugs, and maintaining the codebase.' +
-' I work closely with the design team to ensure that the applications are user-friendly and visually appealing.</p>' +
+' <p>After completing my degree, I served my mandatory military service.' +
+' During my military service, I was honored by the Hellenic Air Force (HAF) for developing software for the management of the warehouse and ' + 
+' making a monthly prediction of the costs of supplies and consumables. </p>' +
 ' <p>Apart from iOS engineering, I am also interested in operating systems and artificial intelligence.' +
 ' I am constantly looking for ways to expand my knowledge and stay up-to-date with the latest technologies and trends in these fields.' +
-' I believe that by continuously learning and improving my skills, I can become a more effective and valuable software engineer.</p>' +
-' <p>In my free time, I enjoy reading books on computer science and technology.' +
-' I also like to experiment with new programming languages and frameworks to broaden my knowledge and skillset.' +
-' Additionally, I like to attend tech conferences and events to network with other professionals in the field and learn about new developments in the industry.</p>' +
-'<p>Overall, my passion for software engineering, iOS development, operating systems, and artificial intelligence has driven me to pursue a career in this exciting field.'+
-' With my skills and experience, I am confident that I can make valuable contributions to any team or organization that I work with.</p>' +
+' By continuously learning and improving my skills, I am confident that I can make valuable contributions to any team or organization that I work with.</p>' +
+' <p>In my free time, I enjoy reading books on computer science and technology, watching sports, and going to gym.' +
 ' <p>You can find me at: <a href="https://www.github.com/lkostakis" target="_blank"><img src="Assets/github.png" alt="Github"></a>' +
 ' or <a href="https://www.linkedin.com/in/eleftherios-kostakis/" target="_blank"><img src="Assets/linkedin.png" alt="LinkedIn"></a>' +
 '</p> <p>Email Account: lp.kostakis@gmail.com</p>';
@@ -96,7 +91,7 @@ menuLinks.forEach(link => {
             break;
           case '#education':
               contentDiv.innerHTML = '<p>I hold a Master of Engineering degree (EQF level 7) from the Department ' +
-              '<p>You can find my thesis online at: <a href="/Documents/kostakis_thesis.pdf">kostakis_thesis.pdf</a>.</p>';
+              '<p>You can find my thesis online at: <a href="/Documents/kostakis_thesis.pdf" target="_blank">kostakis_thesis.pdf</a>.</p>';
               break;
           case '#skills':
               contentDiv.innerHTML = '<p>Here are my skills and abilities.</p>';
