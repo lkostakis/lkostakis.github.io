@@ -17,11 +17,21 @@ body {
     margin-right: 5%;
 }
 
-#about, #education, #skills {
+#about, #education, #experience {
     opacity: 100%;
     font-size: 1em;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+ul.experience-content {
+    list-style-type: disc;
+}
+
+a.experience-content {
+    /* color: inherit; */
+    text-decoration: underline;
+    color: #333333;
 }
 
 #home h2 {
@@ -68,7 +78,7 @@ body {
     }
 }
 
-#about, #education, #skills, #content {
+#about, #education, #experience, #content {
     animation: sections-fade 2s alternate;
 }
 
@@ -112,7 +122,7 @@ img {
         margin-bottom: 5%;
     }
     
-    #about, #education, #skills {
+    #about, #education, #experience {
         opacity: 100%;
         font-size: 0.8em;
     }

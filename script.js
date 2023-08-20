@@ -78,7 +78,38 @@ const aboutMe = '<p>I am a highly motivated software engineer with a passion for
 ' or <a href="https://www.linkedin.com/in/eleftherios-kostakis/" target="_blank"><img src="Assets/linkedin.png" alt="LinkedIn"></a>' +
 '</p> <p>Email Account: lp.kostakis@gmail.com</p>';
 
+const education = '<p>I hold a Master of Engineering degree (EQF level 7) from the <a href="https://engineering.uoi.gr/en/department-of-computer-science-and-engineering/" target="_blank">' +
+'Department of Computer Science & Engineering, School of Engineering, University of Ioannina.</a></p>' +
+'<p>Thesis title: Image inpainting using generative adversarial networks (GANs).</p>' +
+'<p>In this thesis, a modified method of the inversion approach was proposed to apply well-trained GANs' +
+'as an effective prior to image inpainting tasks. Two different types of attention modules were applied to the original work ' +
+'of multi-code GAN prior (mGANprior), including Self-Attention with scaled-dot product as well as dot product scoring functions, ' +
+' and Convolutional Block Attention Module (CBAM). To evaluate the proposed multi-code GAN prior with attention layers, three LSUN datasets were used.</p>' +
+'<p>Technologies used: PyTorch, Secure Shell (SSH).</p>' +
+'<p>You can find my thesis online at: <a href="/Documents/kostakis_thesis.pdf" target="_blank">kostakis_thesis.pdf</a>.</p>';
 contentDiv.innerHTML = aboutMe;
+
+const experience = '<h2 class="experience-title"> Junior iOS Engineer at <a class="experience-content" href="https://www.afse.eu/" target="_blank">Advantage FSE</a></h2>' +
+'<h3>January 2023 - Current</h3>' +
+'<ul class="experience-content">' +
+'<li>Modelling, developing and maintaining company’s iOS app banking solution.</li>' +
+'<li>Collaborating with designers, product managers, and QA engineers.</li>' +
+'<li>Codebase transition from Objective-C to Swift.</li>' +
+'<li>Shipping banking apps to production.</li>' +
+'<li>Working in Agile environment.</li>' +
+'</ul>' +
+'<h2 class="experience-title"> Software Engineer Trainee at <a class="experience-content" href="https://www.afse.eu/" target="_blank">Advantage FSE</a></h2>' +
+'<h3>October 2022 - December 2022</h3>' +
+'<ul class="experience-content">' +
+'<li>Basic principles of Object-Oriented Programming (OOP).</li>' +
+'<li>Solid understanding of RESTful APIs and JSON.</li>' +
+'<li>Developed end-to-end web application.</li>' +
+'</ul>' + 
+'<h2 class="experience-title"> Information Technology Support Assistant at <a class="experience-content" href="https://www.haf.gr/" target="_blank">Hellenic Air Force</a></h2>' +
+'<h3>November 2021 - August 2022</h3>' +
+'<p>During my military service, I was honored by the Hellenic Air Force (HAF) for developing software for the ' +
+'management of the warehouse and making a monthly prediction of the costs of supplies and consumables.</p>' +
+'<p>Technologies used: Java, javafx, PostgreSQL and Log4j2.</p>';
 
 menuLinks.forEach(link => {
     link.addEventListener('click', event => {
@@ -90,11 +121,10 @@ menuLinks.forEach(link => {
                 contentDiv.innerHTML = aboutMe;
             break;
           case '#education':
-              contentDiv.innerHTML = '<p>I hold a Master of Engineering degree (EQF level 7) from the Department ' +
-              '<p>You can find my thesis online at: <a href="/Documents/kostakis_thesis.pdf" target="_blank">kostakis_thesis.pdf</a>.</p>';
+              contentDiv.innerHTML = education;
               break;
-          case '#skills':
-              contentDiv.innerHTML = '<p>Here are my skills and abilities.</p>';
+          case '#experience':
+              contentDiv.innerHTML = experience;
               break;
         default:
               contentDiv.innerHTML = 'Default text';
