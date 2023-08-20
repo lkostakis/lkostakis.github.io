@@ -29,9 +29,8 @@ ul.experience-content {
 }
 
 a.experience-content {
-    /* color: inherit; */
+    color: inherit;
     text-decoration: underline;
-    color: #333333;
 }
 
 #home h2 {
